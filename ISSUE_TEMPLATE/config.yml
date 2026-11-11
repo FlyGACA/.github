@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Report a security vulnerability
+    url: https://github.com/FlyGACA/.github/blob/main/SECURITY.md
+    about: Please report security issues privately, not as a public issue.
+  - name: Contact FlyGACA
+    url: https://flygaca.com
+    about: Questions about using flygaca.com or Captain Adel.
