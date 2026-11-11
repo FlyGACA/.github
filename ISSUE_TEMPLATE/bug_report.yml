@@ -1,0 +1,39 @@
+name: Bug report
+description: Something isn't working as expected
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: Describe the problem and what you expected instead.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Go to ...
+        2. Tap ...
+        3. See error
+    validations:
+      required: true
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Where did it happen?
+      options:
+        - Website (flygaca.com)
+        - Captain Adel
+        - iOS app
+        - Other
+  - type: input
+    id: version
+    attributes:
+      label: Browser / device / app version
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots or logs
