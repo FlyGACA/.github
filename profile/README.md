@@ -12,18 +12,35 @@ Independent, bilingual (English / العربية) tools and learning resources f
 
 ---
 
+## Choose a learning resource
+
+Use FlyGACA for regulatory study, Captain Adel for bilingual questions with source citations, and Gallery for aviation learning graphics and artwork.
+
+اختر فلاي جاكا لدراسة اللوائح، أو كابتن عادل للأسئلة بالعربية والإنجليزية، أو المعرض لاستكشاف المواد البصرية.
+
+```mermaid
+flowchart LR
+    N0["Saudi aviation learning"]
+    N1["Web platform"]
+    N2["Bilingual assistant"]
+    N3["Visual library"]
+    N0 --> N1
+    N0 --> N2
+    N0 --> N3
+```
+
 ## What we build
 
 | Project | What it is |
 | --- | --- |
-| **FlyGACA** | All-in-one flight platform for Saudi civil aviation — [flygaca.com](https://flygaca.com) |
-| **Captain Adel** | AI flight instructor that answers from the exact GACAR section, or refuses — [captadel.com](https://captadel.com) |
+| **FlyGACA** | Arabic and English aviation learning platform — [flygaca.com](https://flygaca.com) |
+| **Captain Adel** | Bilingual aviation learning assistant with source citations and flight calculations — [captadel.com](https://captadel.com) |
 | **FlyGACA Family** | The independent, bilingual educational ecosystem for Saudi civil aviation |
 | **Private Pilot Handbook** | Bilingual study material for PPL, CPL, IR and ATPL students |
-| **FlightBag** | An electronic flight bag for pilots |
+| **FlightBag** | English–Arabic pilot study companion in preparation |
 | **iOS** | The native iOS suite |
-| **Gallery** | Aviation photography — [gallery.flygaca.com](https://gallery.flygaca.com) |
-| **C172** | Cessna 172 training tools |
+| **Gallery** | Aviation learning graphics, artwork, wallpapers and video — [gallery.flygaca.com](https://gallery.flygaca.com) |
+| **C172** | Educational 3D model of a 1979 Cessna 172N |
 
 ## ما نقدّمه
 
