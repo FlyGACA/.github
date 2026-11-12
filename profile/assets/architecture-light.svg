@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 640" width="720" height="640" role="img" aria-labelledby="t d" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif">
+  <title id="t">How the FlyGACA projects connect</title>
+  <desc id="d">Official GACA publications (the GACAR regulations and the Saudi eAIP) feed the FlyGACA web platform, the Captain Adel assistant and the saudi-airspace dataset. FlyGACA and Captain Adel feed the native iOS apps. The saudi-airspace dataset and the C172 model feed FlightBag. Gallery is a separate visual library.</desc>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0 L10 5 L0 10 z" fill="#6e7781"/>
+    </marker>
+  </defs>
+  <rect x="1" y="1" width="718" height="638" rx="14" fill="#ffffff" stroke="#d0d7de"/>
+  <text x="30" y="40" font-size="12" font-weight="600" letter-spacing="1.2" fill="#59636e">OFFICIAL SOURCES · PUBLISHED BY GACA</text>
+  <rect x="30" y="54" width="310" height="66" rx="10" fill="#f6f8fa" stroke="#8c959f" stroke-width="1.5"/>
+  <text x="185" y="83" text-anchor="middle" font-size="18" font-weight="600" fill="#1f2328">GACAR regulations</text>
+  <text x="185" y="105" text-anchor="middle" font-size="13.5" fill="#59636e">The regulation text</text>
+  <rect x="380" y="54" width="310" height="66" rx="10" fill="#f6f8fa" stroke="#8c959f" stroke-width="1.5"/>
+  <text x="535" y="83" text-anchor="middle" font-size="18" font-weight="600" fill="#1f2328">Saudi eAIP</text>
+  <text x="535" y="105" text-anchor="middle" font-size="13.5" fill="#59636e">Airspace and aerodromes</text>
+  <text x="466" y="184" font-size="12" font-weight="600" letter-spacing="1.2" fill="#59636e">DATA AND MODELS</text>
+  <rect x="380" y="198" width="148" height="66" rx="10" fill="#fbf5e6" stroke="#7d5f14" stroke-width="1.5"/>
+  <text x="454" y="227" text-anchor="middle" font-size="18" font-weight="600" fill="#1f2328">saudi-airspace</text>
+  <text x="454" y="249" text-anchor="middle" font-size="13.5" fill="#59636e">Airspace dataset</text>
+  <rect x="542" y="198" width="148" height="66" rx="10" fill="#fbf5e6" stroke="#7d5f14" stroke-width="1.5"/>
+  <text x="616" y="227" text-anchor="middle" font-size="18" font-weight="600" fill="#1f2328">C172</text>
+  <text x="616" y="249" text-anchor="middle" font-size="13.5" fill="#59636e">3D Cessna 172N</text>
+  <text x="116" y="328" font-size="12" font-weight="600" letter-spacing="1.2" fill="#59636e">PRODUCTS</text>
+  <rect x="30" y="342" width="148" height="66" rx="10" fill="#eaf2fd" stroke="#1a63c4" stroke-width="1.5"/>
+  <text x="104" y="371" text-anchor="middle" font-size="18" font-weight="600" fill="#1f2328">FlyGACA</text>
+  <text x="104" y="393" text-anchor="middle" font-size="13.5" fill="#59636e">Web platform</text>
+  <rect x="192" y="342" width="148" height="66" rx="10" fill="#eaf2fd" stroke="#1a63c4" stroke-width="1.5"/>
+  <text x="266" y="371" text-anchor="middle" font-size="18" font-weight="600" fill="#1f2328">Captain Adel</text>
+  <text x="266" y="393" text-anchor="middle" font-size="13.5" fill="#59636e">Cited answers</text>
+  <rect x="380" y="342" width="310" height="66" rx="10" fill="#eaf2fd" stroke="#1a63c4" stroke-width="1.5"/>
+  <text x="535" y="371" text-anchor="middle" font-size="18" font-weight="600" fill="#1f2328">FlightBag</text>
+  <text x="535" y="393" text-anchor="middle" font-size="13.5" fill="#59636e">Study companion and pilot handbook</text>
+  <rect x="30" y="486" width="310" height="66" rx="10" fill="#eaf2fd" stroke="#1a63c4" stroke-width="1.5"/>
+  <text x="185" y="515" text-anchor="middle" font-size="18" font-weight="600" fill="#1f2328">iOS</text>
+  <text x="185" y="537" text-anchor="middle" font-size="13.5" fill="#59636e">Native study apps, offline</text>
+  <rect x="380" y="486" width="310" height="66" rx="10" fill="#eaf2fd" stroke="#1a63c4" stroke-width="1.5"/>
+  <text x="535" y="515" text-anchor="middle" font-size="18" font-weight="600" fill="#1f2328">Gallery</text>
+  <text x="535" y="537" text-anchor="middle" font-size="13.5" fill="#59636e">Learning graphics and artwork</text>
+  <path d="M104 120 L104 340" stroke="#6e7781" stroke-width="1.6" fill="none" marker-end="url(#a)"/>
+  <path d="M266 120 L266 340" stroke="#6e7781" stroke-width="1.6" fill="none" marker-end="url(#a)"/>
+  <text x="116" y="236" font-size="12.5" fill="#59636e" text-anchor="start">regulation text,</text>
+  <text x="116" y="252" font-size="12.5" fill="#59636e" text-anchor="start">cited by section</text>
+  <path d="M454 120 L454 196" stroke="#6e7781" stroke-width="1.6" fill="none" marker-end="url(#a)"/>
+  <path d="M454 264 L454 340" stroke="#6e7781" stroke-width="1.6" fill="none" marker-end="url(#a)"/>
+  <path d="M616 264 L616 340" stroke="#6e7781" stroke-width="1.6" fill="none" marker-end="url(#a)"/>
+  <text x="466" y="306" font-size="12.5" fill="#59636e" text-anchor="start">airspace</text>
+  <text x="604" y="306" font-size="12.5" fill="#59636e" text-anchor="end">figures</text>
+  <path d="M104 408 L104 484" stroke="#6e7781" stroke-width="1.6" fill="none" marker-end="url(#a)"/>
+  <path d="M266 408 L266 484" stroke="#6e7781" stroke-width="1.6" fill="none" marker-end="url(#a)"/>
+  <text x="116" y="450" font-size="12.5" fill="#59636e" text-anchor="start">content packs</text>
+  <text x="278" y="450" font-size="12.5" fill="#59636e" text-anchor="start">chat</text>
+  <text x="360" y="604" text-anchor="middle" font-size="12.5" fill="#59636e">Independent educational project. Not affiliated with GACA. Not for navigation.</text>
+</svg>
