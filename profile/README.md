@@ -50,6 +50,10 @@ flowchart LR
 - **كابتن عادل** — مدرّب طيران ذكي يجيب من نص اللائحة نفسه مع رقم المادة، أو يعتذر.
 - **دليل الطيار الخاص** — مادة دراسية بالعربية والإنجليزية لرخص PPL وCPL وIR وATPL.
 
+## Maintainer directory
+
+The [public repository directory](https://github.com/FlyGACA/FlyGACA-Family/blob/main/REPOSITORIES.md) identifies the purpose and lifecycle of public code and community resources.
+
 ## Get involved
 
 - Found a bug or have an idea? Open an issue in the relevant repository.
