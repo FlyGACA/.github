@@ -18,7 +18,7 @@ Use FlyGACA for regulatory study, Captain Adel for bilingual questions with sour
 
 <div dir="rtl" align="right">
 
-اختر فلاي جاكا لدراسة اللوائح، أو كابتن عادل للأسئلة بالعربية والإنجليزية، أو المعرض لاستكشاف المواد البصرية.
+اختر فلاي قاكا لدراسة اللوائح، أو كابتن عادل للأسئلة بالعربية والإنجليزية، أو المعرض لاستكشاف المواد البصرية.
 
 </div>
 
@@ -47,7 +47,7 @@ Use FlyGACA for regulatory study, Captain Adel for bilingual questions with sour
 
 أدوات ومصادر تعليمية مستقلة وثنائية اللغة للطيران المدني في المملكة العربية السعودية، مبنية على لوائح الطيران المدني (GACAR):
 
-- **فلاي جاكا** — منصة تعليمية للطيران بالعربية والإنجليزية للطيارين والطلاب.
+- **فلاي قاكا** — منصة تعليمية للطيران بالعربية والإنجليزية للطيارين والطلاب.
 - **كابتن عادل** — مساعد تعليمي يجيب من نص اللائحة نفسه مع رقم المادة، أو يعتذر.
 - **دليل الطيار الخاص** — مسودة تحريرية بالعربية والإنجليزية لرخصة الطيار الخاص (PPL).
 
@@ -69,6 +69,6 @@ The [public repository directory](https://github.com/FlyGACA/FlyGACA-Family/blob
 
 <sub>FlyGACA is an independent project and is not affiliated with the General Authority of Civil Aviation (GACA).</sub>
 
-<sub dir="rtl">فلاي جاكا مشروع تعليمي مستقل، وغير تابع للهيئة العامة للطيران المدني (GACA).</sub>
+<sub dir="rtl">فلاي قاكا مشروع تعليمي مستقل، وغير تابع للهيئة العامة للطيران المدني (GACA).</sub>
 
 </div>
