@@ -1,0 +1,7 @@
+{
+  "name": "FlyGACA Python CI",
+  "description": "Install requirements and run the unittest suite with a read-only token, a timeout and one run per branch at a time.",
+  "iconName": "python",
+  "categories": ["Python"],
+  "filePatterns": ["requirements.txt$", "pyproject.toml$"]
+}
