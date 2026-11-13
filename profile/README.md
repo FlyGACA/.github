@@ -16,18 +16,17 @@ Independent, bilingual (English / العربية) tools and learning resources f
 
 Use FlyGACA for regulatory study, Captain Adel for bilingual questions with source citations, and Gallery for aviation learning graphics and artwork.
 
+<div dir="rtl" align="right">
+
 اختر فلاي قاكا لدراسة اللوائح، أو كابتن عادل للأسئلة بالعربية والإنجليزية، أو المعرض لاستكشاف المواد البصرية.
 
-```mermaid
-flowchart LR
-    N0["Saudi aviation learning"]
-    N1["Web platform"]
-    N2["Bilingual assistant"]
-    N3["Visual library"]
-    N0 --> N1
-    N0 --> N2
-    N0 --> N3
-```
+</div>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/architecture-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/architecture-light.svg">
+  <img src="assets/architecture-light.svg" width="720" alt="How the FlyGACA projects connect: the GACAR regulations feed the FlyGACA web platform and the Captain Adel assistant, which feed the native iOS apps; the Saudi eAIP feeds the saudi-airspace dataset, which together with the C172 model feeds FlightBag; Gallery is a separate visual library.">
+</picture>
 
 ## What we build
 
@@ -36,19 +35,23 @@ flowchart LR
 | **FlyGACA** | Arabic and English aviation learning platform — [flygaca.com](https://flygaca.com) |
 | **Captain Adel** | Bilingual aviation learning assistant with source citations and flight calculations — [captadel.com](https://captadel.com) |
 | **FlyGACA Family** | The independent, bilingual educational ecosystem for Saudi civil aviation |
-| **Private Pilot Handbook** | Bilingual study material for PPL, CPL, IR and ATPL students |
+| **Private Pilot Handbook** | English and Arabic private pilot (PPL) handbook, an editorial draft inside FlightBag |
 | **FlightBag** | English–Arabic pilot study companion in preparation |
-| **iOS** | The native iOS suite |
+| **iOS** | Native iOS study apps, in testing |
 | **Gallery** | Aviation learning graphics, artwork, wallpapers and video — [gallery.flygaca.com](https://gallery.flygaca.com) |
 | **C172** | Educational 3D model of a 1979 Cessna 172N |
+
+<div dir="rtl" align="right">
 
 ## ما نقدّمه
 
 أدوات ومصادر تعليمية مستقلة وثنائية اللغة للطيران المدني في المملكة العربية السعودية، مبنية على لوائح الطيران المدني (GACAR):
 
-- **فلاي قاكا** — منصة طيران متكاملة للطيارين والطلاب.
-- **كابتن عادل** — مدرّب طيران ذكي يجيب من نص اللائحة نفسه مع رقم المادة، أو يعتذر.
-- **دليل الطيار الخاص** — مادة دراسية بالعربية والإنجليزية لرخص PPL وCPL وIR وATPL.
+- **فلاي قاكا** — منصة تعليمية للطيران بالعربية والإنجليزية للطيارين والطلاب.
+- **كابتن عادل** — مساعد تعليمي يجيب من نص اللائحة نفسه مع رقم المادة، أو يعتذر.
+- **دليل الطيار الخاص** — مسودة تحريرية بالعربية والإنجليزية لرخصة الطيار الخاص (PPL).
+
+</div>
 
 ## Maintainer directory
 
@@ -65,5 +68,7 @@ The [public repository directory](https://github.com/FlyGACA/FlyGACA-Family/blob
 [Instagram](https://www.instagram.com/flygaca) · [LinkedIn](https://www.linkedin.com/company/flygaca) · [Snapchat](https://www.snapchat.com/@flygaca) · [Facebook](https://www.facebook.com/@flygaca)
 
 <sub>FlyGACA is an independent project and is not affiliated with the General Authority of Civil Aviation (GACA).</sub>
+
+<sub dir="rtl">فلاي قاكا مشروع تعليمي مستقل، وغير تابع للهيئة العامة للطيران المدني (GACA).</sub>
 
 </div>
