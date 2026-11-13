@@ -1,0 +1,30 @@
+name: Node CI
+
+# Starter workflow for FlyGACA repositories built with Node.js: install, test, build.
+# The job is called "test" on purpose: a branch ruleset (rulesets/default-branch.json) requires a check by that name.
+on:
+  pull_request:
+  push:
+    branches: [$default-branch]
+
+# Read-only by default; a job that needs more says so itself.
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm # needs a package-lock.json
+      - run: npm ci
+      - run: npm test --if-present
+      - run: npm run build --if-present

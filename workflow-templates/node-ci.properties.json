@@ -1,0 +1,7 @@
+{
+  "name": "FlyGACA Node CI",
+  "description": "Install, test and build a Node.js project with a read-only token, a timeout and one run per branch at a time.",
+  "iconName": "node",
+  "categories": ["JavaScript", "TypeScript", "Node"],
+  "filePatterns": ["package-lock.json$"]
+}

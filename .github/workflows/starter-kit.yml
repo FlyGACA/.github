@@ -1,0 +1,27 @@
+name: Starter kit
+
+# Runs the starter kit's self-test when the kit, the workflow templates or the ruleset draft change.
+on:
+  pull_request:
+    paths: ['starter-kit/**', 'workflow-templates/**', 'rulesets/**', '.github/workflows/starter-kit.yml']
+  push:
+    branches: [main]
+    paths: ['starter-kit/**', 'workflow-templates/**', 'rulesets/**', '.github/workflows/starter-kit.yml']
+
+permissions:
+  contents: read
+
+concurrency:
+  group: starter-kit-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22 }
+      - run: python3 -m pip install --user pyyaml
+      - run: starter-kit/selftest.sh
