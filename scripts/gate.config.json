@@ -1,0 +1,19 @@
+{
+  "name": "github",
+  "description": "FlyGACA/.github: organization profile and community health files.",
+  "gacar": {
+    "include": ["**/*.md"],
+    "maxPart": 199
+  },
+  "links": {
+    "include": ["**/*.md"],
+    "exclude": ["node_modules/**"],
+    "external": false,
+    "maxExternal": 25
+  },
+  "sources": {
+    "include": ["**/*.md"],
+    "maxAgeDays": 365,
+    "required": []
+  }
+}
