@@ -3,7 +3,9 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
-import { runGate } from '../scripts/gate.mjs';
+import * as gate from '../scripts/gate.mjs';
+
+const { runGate, slugify } = gate;
 
 const NOW = new Date('2026-11-14T00:00:00Z');
 
@@ -169,6 +171,39 @@ test('links: flags a broken cross-file anchor', async () => {
     assert.equal(result.errors.length, 1);
     assert.equal(result.errors[0].check, 'links');
     assert.match(result.errors[0].message, /broken anchor other\.md#setup-guide/);
+  } finally {
+    f.cleanup();
+  }
+});
+
+test('stripTags: drops tags by scanning and keeps the surrounding text', () => {
+  const { stripTags } = gate;
+  assert.equal(typeof stripTags, 'function', 'scripts/gate.mjs must export stripTags');
+  assert.equal(stripTags('Run <code>gate</code> locally'), 'Run gate locally');
+  assert.equal(stripTags('<a id="x"></a>Setup'), 'Setup');
+  // A "<" with no closing ">" is text, not a tag, and is kept as written.
+  assert.equal(stripTags('Parts 1 < 199'), 'Parts 1 < 199');
+  assert.equal(stripTags('a <b>c</b> <d'), 'a c <d');
+});
+
+test('slugify: strips tags without a regular expression', () => {
+  // The regex form /<[^>]+>/ is flagged by CodeQL as incomplete
+  // multi-character sanitization (js/incomplete-multi-character-sanitization).
+  assert.doesNotMatch(slugify.toString(), /<\[\^>\]\+>/);
+  assert.equal(slugify('Run <code>gate</code> locally'), 'run-gate-locally');
+});
+
+test('links: resolves an anchor whose heading contains inline HTML', async () => {
+  const f = fixture();
+  try {
+    f.write('guide.md', '# Guide\n\n[Run](#run-gate-locally)\n\n## Run <code>gate</code> locally\n');
+    const result = await runGate({
+      root: f.root,
+      now: NOW,
+      only: ['links'],
+      config: { links: { include: ['**/*.md'] } },
+    });
+    assert.deepEqual(result.findings, []);
   } finally {
     f.cleanup();
   }
