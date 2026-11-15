@@ -11,3 +11,9 @@ FlyGACA organization profile and default community health files
 | `starter-kit/` | What a new repository starts from: `CLAUDE.md`, Claude Code settings, a git guard hook, content rules and a review workflow. [Details](starter-kit/README.md). |
 | `rulesets/` | A draft branch ruleset for the default branch, not applied. [Details](rulesets/README.md). |
 | `CLAUDE.md` | The rules for working in this repository. |
+
+---
+
+FlyGACA is an independent project and is not affiliated with the General Authority of Civil Aviation (GACA).
+
+فلاي قاكا مشروع تعليمي مستقل، وغير تابع للهيئة العامة للطيران المدني (GACA).

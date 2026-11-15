@@ -1,9 +1,22 @@
 {
   "name": "github",
   "description": "FlyGACA/.github: organization profile and community health files.",
+  "disclaimer": {
+    "files": ["README.md", "profile/README.md"],
+    "english": "not affiliated with",
+    "arabic": "غير\\s+تابع|لا\\s+تتبع|غير\\s+مرتبط|لا\\s+علاقة|لا\\s+ترتبط|غير\\s+مرخّ?ص"
+  },
   "gacar": {
     "include": ["**/*.md"],
     "maxPart": 199
+  },
+  "bilingual": {
+    "arabic": ["**/*_AR.md"],
+    "requireCounterparts": true
+  },
+  "register": {
+    "files": ["README.md", "REPOSITORIES.md"],
+    "requiredColumns": ["Repository", "Owner"]
   },
   "links": {
     "include": ["**/*.md"],
@@ -13,7 +26,7 @@
   },
   "sources": {
     "include": ["**/*.md"],
-    "maxAgeDays": 365,
+    "maxAgeDays": 180,
     "required": []
   }
 }
