@@ -10,7 +10,7 @@ Every public FlyGACA surface must state that it is independent and **not affilia
 
 English (keep the negation):
 
-> Fly GACA is an independent educational platform, not affiliated with, endorsed by, or operated by GACA or the Government of Saudi Arabia. GACA (gaca.gov.sa) is always the authoritative source.
+> FlyGACA is an independent educational platform, not affiliated with, endorsed by, or operated by GACA or the Government of Saudi Arabia. GACA (gaca.gov.sa) is always the authoritative source.
 
 Arabic (must include the negation, not only "independent"):
 
@@ -20,5 +20,8 @@ Rules:
 
 - Never weaken "not affiliated with" to "independent" alone. The negation is the requirement.
 - Keep the disclaimer above the first regulatory claim or citation.
+- The two sentences above are the full form, and are what a page that states regulatory claims should carry. The
+  organisation profile publishes a shorter one-line form in each language; it contains the same negation, passes
+  the `disclaimer` check, and is the wording the owner chose, so do not rewrite it into the full form.
 - In Arabic, "منظومة تعليمية مستقلة" alone is not enough. Use غير تابعة / غير مرتبطة / لا تتبع / لا علاقة.
 - `node scripts/gate.mjs` must report zero `disclaimer` findings before a content PR is ready.
