@@ -29,6 +29,8 @@ jobs:
             echo "scripts/gate.mjs not found. Install the content pack first: ./install.sh <repo> --config <name>" >&2
             exit 1
           fi
+      - name: Run the gate's own tests
+        run: node --test test/gate.test.mjs
       - name: Run gate (SARIF)
         run: node scripts/gate.mjs --format sarif --out gate.sarif
       - name: Upload SARIF
