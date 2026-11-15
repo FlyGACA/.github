@@ -19,7 +19,7 @@ Thank you for helping improve FlyGACA. These guidelines apply to every repositor
 
 Accuracy matters more than anything else here:
 
-- Cite the exact GACAR part and section for any regulatory statement (e.g. `§61.109`).
+- Cite the exact GACAR part and section for any regulatory statement, written as `GACAR § 91.3` (one space after `§`), or `GACAR Part 91` for a whole part.
 - Never invent section numbers, limits or figures. If the source does not say it, neither do we.
 - Keep English and Arabic versions consistent; use the terms in the project glossary.
 

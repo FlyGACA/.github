@@ -19,4 +19,4 @@ body:
     id: regulation
     attributes:
       label: Related GACAR section (if any)
-      placeholder: e.g. Part 61 §61.109
+      placeholder: e.g. GACAR § 91.3
