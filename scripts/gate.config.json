@@ -15,8 +15,8 @@
     "requireCounterparts": true
   },
   "register": {
-    "files": ["README.md", "REPOSITORIES.md"],
-    "requiredColumns": ["Repository", "Owner"]
+    "files": ["README.md", "REPOSITORIES.md", "profile/README.md"],
+    "requiredColumns": ["Project", "Owner"]
   },
   "links": {
     "include": ["**/*.md"],

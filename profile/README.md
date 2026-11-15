@@ -34,16 +34,16 @@ Use FlyGACA for regulatory study, Captain Adel for bilingual questions with sour
 
 ## What we build
 
-| Project | What it is |
-| --- | --- |
-| **FlyGACA** | Arabic and English aviation learning platform — [flygaca.com](https://flygaca.com) |
-| **Captain Adel** | Bilingual aviation learning assistant with source citations and flight calculations — [captadel.com](https://captadel.com) |
-| **FlyGACA Family** | The independent, bilingual educational ecosystem for Saudi civil aviation |
-| **Private Pilot Handbook** | English and Arabic private pilot (PPL) handbook, an editorial draft inside FlightBag |
-| **FlightBag** | English–Arabic pilot study companion in preparation |
-| **iOS** | Native iOS study apps, in testing |
-| **Gallery** | Aviation learning graphics, artwork, wallpapers and video — [gallery.flygaca.com](https://gallery.flygaca.com) |
-| **C172** | Educational 3D model of a 1979 Cessna 172N |
+| Project | Owner | What it is |
+| --- | --- | --- |
+| **FlyGACA** | @FlyGACA/apps | Arabic and English aviation learning platform — [flygaca.com](https://flygaca.com) |
+| **Captain Adel** | @FlyGACA/apps | Bilingual aviation learning assistant with source citations and flight calculations — [captadel.com](https://captadel.com) |
+| **FlyGACA Family** | @FlyGACA/content | The independent, bilingual educational ecosystem for Saudi civil aviation |
+| **Private Pilot Handbook** | @FlyGACA/apps | English and Arabic private pilot (PPL) handbook, an editorial draft inside FlightBag |
+| **FlightBag** | @FlyGACA/apps | English–Arabic pilot study companion in preparation |
+| **iOS** | @FlyGACA/apps | Native iOS study apps, in testing |
+| **Gallery** | @FlyGACA/content | Aviation learning graphics, artwork, wallpapers and video — [gallery.flygaca.com](https://gallery.flygaca.com) |
+| **C172** | @FlyGACA/content | Educational 3D model of a 1979 Cessna 172N |
 
 <div dir="rtl" align="right">
 

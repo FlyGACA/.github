@@ -11,13 +11,14 @@ Any table whose rows describe repositories must carry both columns:
 ```markdown
 | Repository | Owner | Status | What it covers |
 | --- | --- | --- | --- |
-| FlyGACA-Family | @iflygaca/maintainers | active | Public ecosystem index |
+| FlyGACA-Family | @FlyGACA/content | active | Public ecosystem index |
 ```
 
 Rules:
 
-- `Owner` is required and must be a real GitHub team or user (`@iflygaca/maintainers`, `@iflygaca/office`), not a person's unverified name.
-- Never write `unverified`, `TBD`, `?`, or leave the cell empty. If ownership is genuinely unknown, resolve it (CODEOWNERS, the repo's maintainers) before publishing the row.
+- `Owner` is required and must be a real GitHub team or user — the organization's teams are @FlyGACA/apps, @FlyGACA/content and @FlyGACA/core — not a person's unverified name.
+- Never write `unverified`, `TBD`, `?`, or leave the cell empty. If ownership is genuinely unknown, resolve it (the team's repository list, CODEOWNERS, the repo's maintainers) before publishing the row.
 - Keep `Status` in step with the repository: active, archived, private, or draft.
-- Do not publish a repository register in more than one file. The gate reads `README.md` and `REPOSITORIES.md`; keep a single source of truth.
+- Do not publish a repository register in more than one file. Here the register is the profile's `Project` table in `profile/README.md`; FlyGACA-Family keeps the repository directory in its own `REPOSITORIES.md`.
+- Know what the check does and does not catch. `scripts/gate.config.json` reads `README.md`, `REPOSITORIES.md` and `profile/README.md`, and matches column headers exactly against one pair — here `Project` and `Owner`. A table headed `Repository and guide` / `Repository owner` is invisible to it, and so is a placeholder written as a phrase: only a bare `unverified`, `TBD`, `todo`, `?`, `n/a` or `none` (or an empty cell) is flagged, so `Owner unverified` passes. Do not treat a green run as proof that every owner was verified.
 - `node scripts/gate.mjs` must report zero `register` findings before a content PR is ready.
