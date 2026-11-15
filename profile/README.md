@@ -4,6 +4,10 @@
 
 **The Saudi Aviation Library** · **مكتبة الطيران السعودية**
 
+<sub>FlyGACA is an independent project and is not affiliated with the General Authority of Civil Aviation (GACA).</sub>
+
+<sub dir="rtl">فلاي قاكا مشروع تعليمي مستقل، وغير تابع للهيئة العامة للطيران المدني (GACA).</sub>
+
 Independent, bilingual (English / العربية) tools and learning resources for Saudi civil aviation — built around the GACAR regulations.
 
 [flygaca.com](https://flygaca.com) · [Captain Adel](https://captadel.com) · [Gallery](https://gallery.flygaca.com)
@@ -66,9 +70,5 @@ The [public repository directory](https://github.com/FlyGACA/FlyGACA-Family/blob
 <div align="center">
 
 [Instagram](https://www.instagram.com/flygaca) · [LinkedIn](https://www.linkedin.com/company/flygaca) · [Snapchat](https://www.snapchat.com/@flygaca) · [Facebook](https://www.facebook.com/@flygaca)
-
-<sub>FlyGACA is an independent project and is not affiliated with the General Authority of Civil Aviation (GACA).</sub>
-
-<sub dir="rtl">فلاي قاكا مشروع تعليمي مستقل، وغير تابع للهيئة العامة للطيران المدني (GACA).</sub>
 
 </div>
