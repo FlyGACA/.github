@@ -34,6 +34,27 @@ changes nothing until someone with admin rights switches it to active.
   }
   ```
 
+## Which check names this repository should require
+
+`required-status-checks.json` holds the rule for FlyGACA/.github itself, as a draft: it is not merged into
+`default-branch.json` and it is not applied. The names come from `<workflow name> / <job name>`, read off the files in
+`.github/workflows/`.
+
+| Check name | Require it? | Why |
+| --- | --- | --- |
+| `Content gate / Six-check content gate` | **Yes** | It runs on every pull request (no `paths:` filter) and on pushes to `main`, and it is the only job that enforces all six policies, including the gate's own tests. |
+| `Starter kit / test` | No | `starter-kit.yml` filters on `paths: ['starter-kit/**', 'workflow-templates/**', 'rulesets/**', ...]`. A pull request that touches only content never starts this job, so requiring it would wait forever on a check that does not report. |
+| `Content gate / Weekly external link check` | No | `if: github.event_name == 'schedule' \|\| github.event_name == 'workflow_dispatch'`. It never runs on a pull request. |
+| `Content gate / Qoder AI review (optional)` | No | It is skipped when `QODER_API_KEY` is unset or the `qoder` CLI is missing, and a review by an optional tool is not a merge gate. |
+
+Two notes for whoever applies this:
+
+- `do_not_enforce_on_create` is `true` in the draft, so the rule does not block pull requests that were open before it
+  was imported. Set it to `false` once every open pull request has run the gate.
+- Verify the name in a pull request's Checks tab before importing. The check name is the workflow file's `name:` plus
+  the job's `name:`, and renaming either silently strands the required check. If `Content gate / Six-check content
+  gate` is renamed, update the `context` string and `_check_names` in the same change.
+
 ## Applying it to one repository, or to the organization
 
 For one repository, import the file under that repository's Settings → Rules → Rulesets. For the whole organization,

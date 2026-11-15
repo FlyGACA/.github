@@ -1,0 +1,14 @@
+{
+  "_comment": "Draft only. This is the required_status_checks rule for FlyGACA/.github itself, written as the rules object that default-branch.json would carry once active. Nothing here is applied: rulesets are settings, and settings are the owner's to change. See README.md for why these names and not the others.",
+  "_check_names": [
+    "Content gate / Six-check content gate"
+  ],
+  "type": "required_status_checks",
+  "parameters": {
+    "strict_required_status_checks_policy": false,
+    "do_not_enforce_on_create": true,
+    "required_status_checks": [
+      { "context": "Content gate / Six-check content gate" }
+    ]
+  }
+}
