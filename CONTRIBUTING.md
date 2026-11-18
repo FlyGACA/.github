@@ -23,6 +23,10 @@ Accuracy matters more than anything else here:
 - Never invent section numbers, limits or figures. If the source does not say it, neither do we.
 - Keep English and Arabic versions consistent; use the terms in the project glossary.
 
+## AI agents and Wakers
+
+FlyGACA's AI agents ("Wakers") work under one organization-wide handbook: `FlyGACA/Office` → `docs/wakers/operating-handbook.md`. It records repository ownership, the ten team rules, the reporting format and the weekly work rhythm. Start there, then read the repository's `AGENTS.md` for local constraints — this repository's content policies live in `AGENTS.md`. Where the two differ, the stricter rule applies.
+
 ## Code of conduct
 
 By taking part you agree to follow our [Code of Conduct](CODE_OF_CONDUCT.md).
