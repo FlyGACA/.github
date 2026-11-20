@@ -24,7 +24,7 @@ If a rule in `.qoder/rules/*.mdc` conflicts with this file, **the more specific 
 node scripts/gate.mjs            # human-readable
 node scripts/gate.mjs --strict   # warnings also fail
 node scripts/gate.mjs --only links --external   # network check
-node --test test/gate.test.mjs   # the gate's own tests
+node --test test/                 # the gate and the workflow-policy tests
 ```
 
 Do not edit the gate or its tests to make a finding disappear. Fix the content, or leave the finding for a human.
