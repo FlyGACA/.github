@@ -42,7 +42,7 @@ jobs:
         run: node scripts/gate.mjs --format sarif --out gate.sarif
       - name: Upload SARIF
         if: always()
-        uses: github/codeql-action/upload-sarif@aaf92c3279600a7c7217a1cd605774c6c791c6c3 # v3
+        uses: github/codeql-action/upload-sarif@d2aacf54c2fbc910db8d7ec338fdb54ea48c692d # v3
         with:
           sarif_file: gate.sarif
           category: content-gate
