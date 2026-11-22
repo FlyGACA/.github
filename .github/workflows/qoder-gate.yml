@@ -8,19 +8,28 @@ on:
     - cron: '15 3 * * 1'
   workflow_dispatch:
 
+# Read-only by default. A job that needs more says so itself: only `gate` writes
+# security events, and only `qoder-comment` writes to the pull request.
 permissions:
   contents: read
   actions: read
-  security-events: write
-  pull-requests: write
+
+# PR runs supersede each other; push and scheduled runs are never cancelled.
+concurrency:
+  group: content-gate-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
 
 jobs:
   gate:
     name: Six-check content gate
     runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: read
+      security-events: write
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
         with:
           node-version: '20'
       - name: Verify the gate is installed
@@ -33,7 +42,7 @@ jobs:
         run: node scripts/gate.mjs --format sarif --out gate.sarif
       - name: Upload SARIF
         if: always()
-        uses: github/codeql-action/upload-sarif@v3
+        uses: github/codeql-action/upload-sarif@aaf92c3279600a7c7217a1cd605774c6c791c6c3 # v3
         with:
           sarif_file: gate.sarif
           category: content-gate
@@ -45,23 +54,36 @@ jobs:
     name: Weekly external link check
     if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: read
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
         with:
           node-version: '20'
       - name: Check external links
         run: node scripts/gate.mjs --only links --external --format text
 
+  # The model reads untrusted PR content. It gets the model key and a read-only
+  # checkout, nothing else: no GitHub token, no write permission. Its output
+  # leaves as an artifact, and a separate job posts it.
   qoder-review:
     name: Qoder AI review (optional)
     if: github.event_name == 'pull_request'
     runs-on: ubuntu-latest
+    timeout-minutes: 30
+    concurrency:
+      group: qoder-review-${{ github.event.pull_request.number }}
+      cancel-in-progress: true
+    permissions:
+      contents: read
+    outputs:
+      enabled: ${{ steps.check.outputs.enabled }}
     env:
       QODER_API_KEY: ${{ secrets.QODER_API_KEY }}
-      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
         with:
           fetch-depth: 0
       - name: Check for the Qoder CLI and credentials
@@ -78,16 +100,38 @@ jobs:
             exit 0
           fi
           echo "enabled=true" >> "$GITHUB_OUTPUT"
-      - name: Run Qoder headless review
+      - name: Run Qoder headless review (read-only)
         if: steps.check.outputs.enabled == 'true'
         run: |
           qoder -p "Review this pull request's content changes against AGENTS.md and .qoder/rules. Report only concrete violations of the disclaimer, GACAR citation, bilingual parity, repository register, link, and source-freshness policies. Do not rewrite aviation facts. Output a short Markdown comment." \
             --output-format json \
-            --permission-mode accept_edits \
+            --permission-mode plan \
             --max-turns 20 > qoder-review.json
           node -e "const fs=require('fs');const r=JSON.parse(fs.readFileSync('qoder-review.json','utf8'));const text=typeof r.result==='string'?r.result:(r.result&&r.result.text)||r.message||'';fs.writeFileSync('qoder-comment.md',text||'Qoder review produced no comment.');"
-      - name: Post the review as a PR comment
+      - name: Hand the review to the posting job
         if: steps.check.outputs.enabled == 'true'
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: qoder-comment
+          path: qoder-comment.md
+          if-no-files-found: error
+          retention-days: 1
+
+  qoder-comment:
+    name: Post the Qoder review
+    needs: qoder-review
+    if: needs.qoder-review.outputs.enabled == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: read
+      pull-requests: write
+    steps:
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4
+        with:
+          name: qoder-comment
+      - name: Post the review as a PR comment
         env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PR_NUMBER: ${{ github.event.number }}
         run: gh pr comment "$PR_NUMBER" --body-file qoder-comment.md

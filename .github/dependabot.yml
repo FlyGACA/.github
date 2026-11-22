@@ -1,0 +1,13 @@
+# Keep the workflow and template SHA pins fresh. Weekly, grouped minor+patch so
+# the noise stays low; majors arrive alone for a human read.
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+    groups:
+      actions:
+        update-types:
+          - minor
+          - patch
