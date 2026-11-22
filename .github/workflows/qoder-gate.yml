@@ -110,7 +110,7 @@ jobs:
           node -e "const fs=require('fs');const r=JSON.parse(fs.readFileSync('qoder-review.json','utf8'));const text=typeof r.result==='string'?r.result:(r.result&&r.result.text)||r.message||'';fs.writeFileSync('qoder-comment.md',text||'Qoder review produced no comment.');"
       - name: Hand the review to the posting job
         if: steps.check.outputs.enabled == 'true'
-        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
           name: qoder-comment
           path: qoder-comment.md
